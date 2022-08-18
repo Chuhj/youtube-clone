@@ -81,13 +81,21 @@ video {
 
 .video_title_info {
   display: flex;
-  overflow: hidden;
+  justify-content: space-between;
   height: 2.8rem;
 }
 
 .video_title {
+  display: -webkit-box;
+  height: 75%;
+  width: 100%;
   font-size: 0.9rem;
+  text-overflow: ellipsis;
+  white-space: normal;
   word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .title_more {
