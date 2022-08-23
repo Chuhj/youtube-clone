@@ -42,11 +42,13 @@ header {
 
 .player {
   height: 14rem;
+  text-align: center;
 }
 
 video {
   height: 100%;
   width: 100%;
+  max-width: 1000px;
 }
 
 .tags,
@@ -168,4 +170,46 @@ video {
 
 .next {
   margin-top: 0.7rem;
+}
+
+.next > span {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.next_videos {
+  margin-top: 8px;
+}
+
+.next_video {
+  display: flex;
+  margin-bottom: 10px;
+}
+.thumbnail {
+  flex-basis: 33%;
+}
+
+.thumbnail > img {
+  width: 100%;
+}
+
+.next_info {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 66%;
+  margin-left: 8px;
+}
+
+.next_title {
+  font-size: 10px;
+}
+
+.next_channel {
+  font-size: 8px;
+  color: grey;
+}
+
+.next_views {
+  font-size: 6px;
+  color: #909090;
 }
