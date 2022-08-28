@@ -41,7 +41,6 @@ header {
 }
 
 .player {
-  height: 14rem;
   text-align: center;
 }
 
@@ -212,4 +211,10 @@ video {
 .next_views {
   font-size: 6px;
   color: #909090;
+}
+
+@media screen and (min-width: 768px) {
+  .metaChannelNext {
+    display: flex;
+  }
 }
