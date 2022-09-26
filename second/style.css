@@ -1,0 +1,229 @@
+:root {
+  /* 색깔, 사이즈 등을 변수로 정의해두고 사용하는 것이 좋음, 일정하게 디자인 할 수 있음 */
+  /* Color */
+  --white-color: #ffffff;
+  --black-color: #202020;
+  --red-color: #ff0000;
+  --blue-color: #045fd4;
+  --grey-light-color: #e0e0e0;
+  --grey-dark-color: #909090;
+
+  /* Size */
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+header .logo {
+  font-size: var(--font-large);
+}
+
+header .logo i {
+  color: var(--red-color);
+}
+
+header .icons .fa-search {
+  margin-right: var(--padding);
+}
+
+/* Video Player */
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* Video Info */
+body > .info {
+  padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .metadata .titleAndButton .title {
+  font-size: var(--font-medium);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+}
+
+.info .metadata .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+/* Action Buttons */
+
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--padding);
+  margin-bottom: var(--padding);
+  font-size: var(--font-medium);
+}
+
+.info .actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .actions button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 16px;
+}
+
+.info .actions button i.active {
+  color: var(--blue-color);
+}
+
+/* Channel Description */
+.info .channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.info .channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.info .channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  margin-right: calc(var(--padding) / 2);
+}
+
+.info .channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+
+.info .channel .metadata .info .subscribers {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+
+.info .channel .subscribe {
+  text-transform: uppercase;
+  color: var(--red-color);
+}
+
+/* Upnext Videos */
+
+.upNext {
+  padding: 0 var(--padding);
+}
+
+.upNext > .title {
+  color: var(--grey-dark-color);
+  font-size: var(--font-medium);
+}
+
+.upNext .videos .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.upNext .videos .item .img {
+  flex: 0 0 35%;
+  margin-right: calc(var(--padding) / 2);
+}
+
+.upNext .videos .item .img img {
+  width: 100%;
+}
+
+.upNext .videos .item .info {
+  flex: 0 0 60%;
+}
+
+.upNext .videos .item .moreBtn {
+  flex: 0 0 5%;
+  height: 100%;
+}
+
+.upNext .videos .item .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .videos .item .info .title {
+  font-size: var(--font-small);
+}
+
+.upNext .videos .item .info .name,
+.upNext .videos .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
